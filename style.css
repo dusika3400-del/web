@@ -1,0 +1,187 @@
+/*Селекторы по элементу*/
+body {
+    background-color: #faf0e6;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    color: #8b4513;
+    font-size: 28px;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h2 {
+    color: #a0522d;
+    font-size: 22px;
+}
+
+p {
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 10px;
+}
+
+/*Селекторы для ссылок*/
+a {
+    color: #8b4513;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p a, li a {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+p a:hover, li a:hover {
+    color: #cd853f;
+    text-decoration: none;
+}
+
+/*Селектор по классу*/
+.highlight {
+    background-color: #fff8dc;
+    font-size: 16px;
+    border-left: 5px solid #cd853f;
+    padding: 10px;
+}
+
+/*Селектор по идентификатору*/
+#patterns {
+    color: #5d3a1a;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/*Оформление таблиц*/
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    vertical-align: middle;
+}
+
+/*Оформление нумерованных списков*/
+ol {
+    list-style-type: upper-roman;
+    background-color: #fff5ee;
+    padding: 20px 40px;
+    border: 2px dotted #cd853f;
+}
+
+/*Оформление ненумерованных списков*/
+ul {
+    list-style-type: square;
+    background-color: #fdf5e6;
+    padding: 15px 35px;
+    border: 1px solid #deb887;
+}
+
+/*Комбинированный селектор*/
+div p {
+    font-size: 14px;
+    color: #4a3729;
+}
+
+/*Группировка свойств*/
+div.content-box {
+    margin: 10px 20px 30px 20px;
+    padding: 15px 25px;
+    border: 2px solid #d2b48c;
+    background: #fff8dc;
+}
+
+/*Стиль для изображений*/
+img {
+    border: 3px solid #deb887;
+}
+
+/*Абсолютное позиционирование*/
+.footer-note {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 200px;
+    background-color: #f5f5dc;
+    border: 1px solid #cd853f;
+    padding: 5px;
+}
+
+/*Фиксированное позиционирование (кнопка "наверх")*/
+.top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    background-color: #8b4513;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #d2b48c;
+}
+
+.top-button a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/*Комбинация relative и absolute*/
+.pattern-container {
+    position: relative;
+    height: 150px;
+    margin: 20px 0;
+    border: 2px dashed #deb887;
+    padding: 10px;
+}
+
+.pattern-label {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #cd853f;
+    color: white;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/*Две колонки с помощью float*/
+.column-container {
+    width: 100%;
+    margin: 20px 0;
+    overflow: hidden; /* Очистка float */
+    border: 1px solid #d2b48c;
+    background-color: #fff8dc;
+}
+
+.column-left {
+    float: left;
+    width: 48%;
+    padding: 10px;
+    background-color: #fdf5e6;
+    margin-right: 2%;
+    border-right: 1px dotted #cd853f;
+}
+
+.column-right {
+    float: right;
+    width: 48%;
+    padding: 10px;
+    background-color: #fdf5e6;
+}
+
+/*Демонстрация clear*/
+.clear-example {
+    clear: both;
+    background-color: #f5f5dc;
+    padding: 10px;
+    margin-top: 20px;
+    border: 1px solid #deb887;
+    text-align: center;
+}
