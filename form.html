@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вяжем вместе | Обратная связь</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+    <style>
+        body {
+            padding-top: 70px;
+            background-color: #faf0e6;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .form-container {
+            background-color: #fff8dc;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #deb887;
+            margin-bottom: 30px;
+        }
+        .form-container h2 {
+            color: #8b4513;
+            margin-top: 0;
+            border-bottom: 2px solid #d2b48c;
+            padding-bottom: 10px;
+        }
+        .btn-knitting {
+            background-color: #8b4513;
+            color: white;
+        }
+        .btn-knitting:hover {
+            background-color: #a0522d;
+            color: white;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 20px 0;
+            background-color: #f5f5dc;
+            border-top: 2px solid #d2b48c;
+            text-align: center;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #8b4513;
+            padding: 10px 15px;
+            border-radius: 4px;
+        }
+        .top-button a {
+            color: white;
+            text-decoration: none;
+        }
+        .required:after {
+            content: " *";
+            color: red;
+        }
+        .alert-success {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Меню</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="glyphicon glyphicon-grain"></span> Вяжем вместе
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="index.html#patterns">Схемы</a></li>
+                    <li><a href="index.html#stitches">Узоры</a></li>
+                    <li><a href="index.html#tips">Советы</a></li>
+                    <li class="active"><a href="form.html">Обратная связь</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="form-container">
+            <h2>
+                <span class="glyphicon glyphicon-envelope"></span> 
+                Обратная связь
+            </h2>
+            
+            <!-- Форма с действием: показывает сообщение при отправке -->
+            <form action="#" method="post" onsubmit="showMessage(event)">
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-user"></span> Личные данные
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="required">Ваше имя</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+                                <input type="text" class="form-control" id="name" placeholder="Введите ваше имя" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="required">Email</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                                <input type="email" class="form-control" id="email" placeholder="example@mail.ru" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Телефон</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></span>
+                                <input type="tel" class="form-control" id="phone" placeholder="+7 (___) ___-__-__">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-comment"></span> Ваше обращение
+                    </div>
+                    <div class="panel-body">
+                        <div class="form-group">
+                            <label class="required">Тема обращения</label>
+                            <select class="form-control" id="subject" required>
+                                <option value="">Выберите тему</option>
+                                <option value="question">Вопрос по схеме</option>
+                                <option value="suggestion">Предложение новой схемы</option>
+                                <option value="cooperation">Сотрудничество</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="required">Сообщение</label>
+                            <textarea class="form-control" id="message" rows="5" placeholder="Опишите ваш вопрос..." required></textarea>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <span class="glyphicon glyphicon-option-horizontal"></span> Дополнительно
+                    </div>
+                    <div class="panel-body">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" id="subscribe"> Подписаться на рассылку новых схем
+                            </label>
+                        </div>
+                        
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reply" value="email" checked> Ответ на email
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="reply" value="phone"> Ответ по телефону
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="btn-group">
+                    <button type="submit" class="btn btn-knitting">
+                        <span class="glyphicon glyphicon-send"></span> Отправить сообщение
+                    </button>
+                    <button type="reset" class="btn btn-default" onclick="clearForm()">
+                        <span class="glyphicon glyphicon-erase"></span> Очистить
+                    </button>
+                    <a href="index.html" class="btn btn-default">
+                        <span class="glyphicon glyphicon-home"></span> На главную
+                    </a>
+                </div>
+            </form>
+            
+            <!-- Место для сообщения об успешной отправке -->
+            <div id="successMessage" class="alert alert-success" style="display: none;">
+                <span class="glyphicon glyphicon-ok"></span> 
+                <strong>Спасибо!</strong> Ваше сообщение отправлено. Мы свяжемся с вами в ближайшее время.
+            </div>
+        </div>
+        
+        <!-- Дополнительная информация -->
+        <div class="alert alert-info">
+            <span class="glyphicon glyphicon-info-sign"></span>
+            <strong>Как это работает:</strong> Это демонстрационная форма. После заполнения полей и нажатия "Отправить" вы увидите сообщение об успешной отправке.
+        </div>
+        
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <p><span class="glyphicon glyphicon-copyright-mark"></span> 2026 Вяжем вместе</p>
+            <p><a href="form.html">Написать нам</a> | <a href="index.html">Вернуться на главную</a></p>
+        </div>
+    </div>
+
+    <div class="top-button">
+        <a href="#"><span class="glyphicon glyphicon-arrow-up"></span> Наверх</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Функция, которая срабатывает при отправке формы
+        function showMessage(event) {
+            event.preventDefault(); // Останавливаем реальную отправку на сервер
+            
+            // Проверяем, заполнены ли обязательные поля
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var message = document.getElementById('message').value;
+            
+            if (name && email && subject && message) {
+                // Показываем сообщение об успехе
+                document.getElementById('successMessage').style.display = 'block';
+                
+                // Прокручиваем страницу к сообщению
+                document.getElementById('successMessage').scrollIntoView({ behavior: 'smooth' });
+                
+                // Опционально: очищаем форму (раскомментируйте, если нужно)
+                // document.querySelector('form').reset();
+            } else {
+                alert('Пожалуйста, заполните все обязательные поля (отмеченные *)');
+            }
+        }
+        
+        // Функция для очистки формы
+        function clearForm() {
+            document.querySelector('form').reset();
+            document.getElementById('successMessage').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

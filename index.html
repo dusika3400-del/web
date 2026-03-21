@@ -2,213 +2,253 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="author" content="Теличко Дарья">
-    <meta name="keywords" content="схемы вязания, вязание спицами, вязание крючком, узоры вязания, описание вязания, паттерны вязания">
-    <meta name="description" content="Бесплатные схемы и описания вязания. Узоры, модели, техники для вязальщиц.">
-    <meta name="robots" content="index, all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Вяжем вместе | Схемы и описания</title>
     
-    <!--СВЯЗЫВАНИЕ с основным файлом стилей-->
-    <link rel="stylesheet" href="style.css" type="text/css">
+    <!-- Bootstrap CSS (CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     
-    <!--Альтернативный стиль-->
-    <!--<link rel="stylesheet" href="alt-style.css" type="text/css">-->
-    
-    <!--ВНЕДРЕННЫЕ СТИЛИ-->
     <style>
-        h2 {
-            color: #8b4513;
-            border-bottom: 2px solid #d2b48c;
+        body {
+            padding-top: 70px;
+            background-color: #faf0e6;
         }
-        .note {
+        .navbar-brand {
+            font-weight: bold;
+        }
+        .jumbotron {
+            background-color: #fff8dc;
+            border-bottom: 3px solid #cd853f;
+        }
+        .jumbotron h1 {
+            color: #8b4513;
+        }
+        .thumbnail {
+            background-color: #fff8dc;
+            border-color: #deb887;
+        }
+        .thumbnail h3 {
+            color: #8b4513;
+        }
+        .table-knitting {
+            background-color: #fff8dc;
+        }
+        .table-knitting > thead > tr > th {
+            background-color: #f5deb3;
+            color: #8b4513;
+        }
+        .well {
+            background-color: #fdf5e6;
+            border-color: #deb887;
+        }
+        .footer {
+            margin-top: 30px;
+            padding: 20px 0;
             background-color: #f5f5dc;
-            font-style: italic;
-            padding: 10px;
+            border-top: 2px solid #d2b48c;
+            text-align: center;
+        }
+        .btn-knitting {
+            background-color: #8b4513;
+            color: white;
+        }
+        .btn-knitting:hover {
+            background-color: #a0522d;
+            color: white;
+        }
+        .pattern-container {
+            position: relative;
+            padding: 20px;
+            margin: 20px 0;
+            border: 2px dashed #deb887;
+            background-color: #fff8dc;
+        }
+        .pattern-label {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background-color: #cd853f;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 4px;
+        }
+        .top-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #8b4513;
+            padding: 10px 15px;
+            border-radius: 4px;
+            z-index: 100;
+        }
+        .top-button a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
-<body bgcolor="#faf0e6" text="#4a3729" link="#8b4513" vlink="#5d3a1a" alink="#cd853f" leftmargin="40" topmargin="30">
+<body>
 
-        <!--Фиксированное позиционирование (кнопка "наверх")-->
-    <div class="top-button">
-        <a href="#">НАВЕРХ</a>
+    <!-- НАВИГАЦИОННОЕ МЕНЮ -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="sr-only">Меню</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                    <span class="glyphicon glyphicon-grain"></span> Вяжем вместе
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Главная</a></li>
+                    <li><a href="#patterns">Схемы</a></li>
+                    <li><a href="#stitches">Узоры</a></li>
+                    <li><a href="#tips">Советы</a></li>
+                    <!-- ВАЖНО: правильная ссылка на form.html -->
+                    <li><a href="form.html">Обратная связь</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        
+        <div class="jumbotron">
+            <h1>🧶 Вяжем вместе</h1>
+            <p>Бесплатные схемы и описания вязания для вдохновения.</p>
+            <p><a class="btn btn-primary btn-lg btn-knitting" href="#patterns">Смотреть схемы &raquo;</a></p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 col-sm-6">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-scissors" style="font-size: 48px; display: block; text-align: center; margin: 20px 0; color: #8b4513;"></span>
+                    <div class="caption">
+                        <h3>Бесплатные схемы</h3>
+                        <p>Большая коллекция схем вязания спицами и крючком.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-education" style="font-size: 48px; display: block; text-align: center; margin: 20px 0; color: #8b4513;"></span>
+                    <div class="caption">
+                        <h3>Обучающие материалы</h3>
+                        <p>Подробные мастер-классы для начинающих.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="thumbnail">
+                    <span class="glyphicon glyphicon-user" style="font-size: 48px; display: block; text-align: center; margin: 20px 0; color: #8b4513;"></span>
+                    <div class="caption">
+                        <h3>Сообщество</h3>
+                        <p>Общайтесь с единомышленницами, делитесь работами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 id="patterns">Схемы вязания</h2>
+        <table class="table table-striped table-bordered table-knitting">
+            <thead>
+                <tr><th>Изделие</th><th>Описание</th><th>Сложность</th><th>Скачать</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><span class="glyphicon glyphicon-gift"></span> Ажурный свитер</td><td>Легкий летний свитер</td><td><span class="label label-warning">Средний</span></td><td><button class="btn btn-xs btn-default">Скачать</button></td></tr>
+                <tr><td><span class="glyphicon glyphicon-flag"></span> Шарф с косами</td><td>Объемный теплый шарф</td><td><span class="label label-success">Начинающий</span></td><td><button class="btn btn-xs btn-default">Скачать</button></td></tr>
+                <tr><td><span class="glyphicon glyphicon-star"></span> Шапка с отворотом</td><td>Классическая шапка</td><td><span class="label label-success">Начинающий</span></td><td><button class="btn btn-xs btn-default">Скачать</button></td></tr>
+            </tbody>
+        </table>
+
+        <hr>
+
+        <h2 id="stitches">Основные узоры</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="well">
+                    <h4><span class="glyphicon glyphicon-list-alt"></span> Популярные узоры:</h4>
+                    <ul><li>Лицевая гладь</li><li>Изнаночная гладь</li><li>Резинка 1x1, 2x2</li><li>Ажурные узоры</li><li>Косы и жгуты</li></ul>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="well">
+                    <h4><span class="glyphicon glyphicon-book"></span> Условные обозначения:</h4>
+                    <pre>| - лицевая петля
+- - изнаночная петля
+O - накид</pre>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2 id="tips">Советы по вязанию</h2>
+        
+        <div class="btn-group" role="group">
+            <button class="btn btn-default"><span class="glyphicon glyphicon-info-sign"></span> Как выбрать пряжу</button>
+            <button class="btn btn-default"><span class="glyphicon glyphicon-scale"></span> Расчет петель</button>
+            <button class="btn btn-default"><span class="glyphicon glyphicon-tint"></span> Уход за изделиями</button>
+        </div>
+
+        <div class="row" style="margin-top: 20px;">
+            <div class="col-md-6">
+                <h4>Подписка</h4>
+                <div class="input-group">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></span>
+                    <input type="email" class="form-control" placeholder="Ваш email">
+                    <span class="input-group-btn"><button class="btn btn-knitting">Подписаться</button></span>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h4>Поиск</h4>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Поиск схем...">
+                    <span class="input-group-btn"><button class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button></span>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>Новинки</h2>
+        <div class="pattern-container">
+            <div class="pattern-label"><span class="glyphicon glyphicon-flash"></span> NEW</div>
+            <div class="row">
+                <div class="col-md-6"><p><strong>Новая коллекция весна-лето 2026</strong><br>Ажурные топы, легкие кардиганы.</p></div>
+                <div class="col-md-6"><p><strong>Видео-курс</strong><br>Подробный разбор сложных узоров.</p></div>
+            </div>
+        </div>
+
+        <!-- КНОПКА ДЛЯ ПЕРЕХОДА НА ФОРМУ (добавлена для удобства) -->
+        <div class="text-center" style="margin: 30px 0;">
+            <a href="form.html" class="btn btn-lg btn-knitting">
+                <span class="glyphicon glyphicon-envelope"></span> Связаться с нами
+            </a>
+        </div>
+
     </div>
 
-    <div align="center">
-        <div align="left">
-            
-            <!--ЗАГОЛОВОК СТРАНИЦЫ-->
-            <h1 align="center">🧶 Вяжем вместе: схемы и описания</h1>
-            <p align="center"><big><big>Бесплатные паттерны для вязальщиц</big></big></p>
-
-            <!--ОГЛАВЛЕНИЕ С ГИПЕРССЫЛКАМИ-->
-            <h2><font color="#8b4513">Содержание</font></h2>
-            <ul>
-                <li type="square"><a href="#about">О проекте</a></li>
-                <li type="square"><a href="#patterns">Схемы вязания</a></li>
-                <li type="square"><a href="#stitches">Основные узоры</a></li>
-                <li type="square"><a href="#tips">Советы по вязанию</a></li>
-                <li type="square"><a href="#links">Полезные ресурсы</a></li>
-            </ul>
-
-            <hr size="3" width="100%" color="#d2b48c">
-            <br>
-
-            <!--О ПРОЕКТЕ-->
-            <h2 id="about"><font color="#8b4513">О проекте</font></h2>
-            <p>Этот сайт создан для вязальщиц, которые ищут вдохновение и новые идеи. Здесь собраны <b>бесплатные схемы</b> и описания вязаных изделий. Нажимайте на изображения или названия, чтобы открыть полную схему.</p>
-            <p class="note"><i>Все схемы предоставлены для личного использования. При публикации своих работ указывайте источник.</i></p>
-            
-            <hr size="2" width="80%" color="#deb887">
-            <br>
-
-            <!--СХЕМЫ ВЯЗАНИЯ-->
-            <h2 id="patterns"><font color="#8b4513">Схемы вязания</font></h2>
-            <p><big>Нажмите на изделие, чтобы открыть схему:</big></p>
-            
-            <table border="1" cellpadding="10" cellspacing="5" bgcolor="#fff8dc" bordercolor="#cd853f">
-                <tr align="center" bgcolor="#f5deb3">
-                    <td><b>Изделие</b></td>
-                    <td><b>Фото</b></td>
-                    <td><b>Описание</b></td>
-                </tr>
-                <tr>
-                    <td><a href="patterns/sweater.html"><b>Ажурный свитер</b></a></td>
-                    <td><a href="patterns/sweater.html"><img src="https://i.pinimg.com/1200x/8d/cb/11/8dcb11f0ec2b78b2e281ba1b1ae42fb4.jpg" alt="Ажурный свитер" width="150" height="120" border="2" hspace="5"></a></td>
-                    <td>Легкий летний свитер с ажурным узором. Уровень сложности: средний.</td>
-                </tr>
-                <tr>
-                    <td><a href="patterns/scarf.html"><b>Шарф с косами</b></a></td>
-                    <td><a href="patterns/scarf.html"><img src="https://i.pinimg.com/1200x/f7/cb/08/f7cb082a07fdd7efc39483fae1a7988f.jpg" alt="Шарф с косами" width="150" height="120" border="2" hspace="5"></a></td>
-                    <td>Объемный теплый шарф с узором "косы". Подходит для начинающих.</td>
-                </tr>
-                <tr>
-                    <td><a href="patterns/hat.html"><b>Шапка с отворотом</b></a></td>
-                    <td><a href="patterns/hat.html"><img src="https://i.pinimg.com/736x/c0/bf/99/c0bf998134a25b06820bd35ce6b88cad.jpg" alt="Шапка с отворотом" width="150" height="120" border="2" hspace="5"></a></td>
-                    <td>Классическая шапка резинкой 2x2. Быстро и просто.</td>
-                </tr>
-                <tr>
-                    <td><a href="patterns/legwarmers.html"><b>Гетры</b></a></td>
-                    <td><a href="patterns/legwarmers.html"><img src="https://i.pinimg.com/736x/ed/aa/3b/edaa3b32306fcafdc4e42fbca19eef1e.jpg" alt="Гетры" width="150" height="120" border="2" hspace="5"></a></td>
-                    <td>Уютные гетры для дома и танцев. Связаны по кругу.</td>
-                </tr>
-            </table>
-            
-            <br>
-            <hr size="3" width="100%" color="#d2b48c">
-            <br>
-
-            <!--ОСНОВНЫЕ УЗОРЫ (нумерованный список с примерами)-->
-            <h2 id="stitches"><font color="#8b4513">Основные узоры</font></h2>
-            <p>Популярные узоры для вязания спицами:</p>
-            
-            <ol>
-                <li type="I"><b>Лицевая гладь</b> — самый простой базовый узор.</li>
-                <li type="I"><b>Изнаночная гладь</b> — обратная сторона лицевой.</li>
-                <li type="I"><b>Резинка 1x1, 2x2</b> — для манжет и планок.</li>
-                <li type="I"><b>Платочная вязка</b> — все петли лицевые.</li>
-                <li type="I"><b>Ажурные узоры</b> — с накидами и убавлениями.</li>
-                <li type="I"><b>Косы и жгуты</b> — рельефные узоры.</li>
-            </ol>
-            
-            <p>Для каждого узора есть схема:</p>
-            <ul>
-                <li type="circle"><a href="patterns/stockinette.html">Схема лицевой глади</a></li>
-                <li type="circle"><a href="patterns/rib.html">Схемы резинок</a></li>
-                <li type="circle"><a href="patterns/cable.html">Схемы кос</a></li>
-            </ul>
-            
-            <hr size="2" width="90%" color="#deb887">
-            <br>
-
-            <!--СОВЕТЫ ПО ВЯЗАНИЮ (разные типы списков)-->
-            <h2 id="tips"><font color="#8b4513">Советы по вязанию</font></h2>
-            
-            <p><b>Как подобрать пряжу:</b></p>
-            <ul>
-                <li type="square">Для свитеров — шерсть или полушерсть</li>
-                <li type="circle">Для летних вещей — хлопок или лен</li>
-                <li type="disc">Для шапок — теплая объемная пряжа</li>
-            </ul>
-            
-            <p><b>Основные правила:</b></p>
-            <ol>
-                <li type="1">Всегда вяжите образец 10x10 см</li>
-                <li type="1">Стирайте образец, чтобы узнать усадку</li>
-                <li type="1">Подбирайте спицы на 0.5-1 мм толще пряжи</li>
-                <li type="1">Записывайте все изменения в схеме</li>
-            </ol>
-            
-            <p><b>Условные обозначения в схемах:</b></p>
-            <pre>
-            | - лицевая петля
-            - - изнаночная петля
-            O - накид
-            / - 2 петли вместе с наклоном вправо
-            \ - 2 петли вместе с наклоном влево
-            </pre>
-            
-            <hr size="1" width="100%" color="#cd853f">
-            <br>
-
-            <!--ПОЛЕЗНЫЕ РЕСУРСЫ (ссылки на внешние сайты)-->
-            <h2 id="links"><font color="#8b4513">Полезные ресурсы</font></h2>
-            
-            <div align="center">
-                <p>
-                    <a href="https://www.ravelry.com" target="_blank" style="color: #8b4513; font-weight: bold;">Ravelry</a> &nbsp;&nbsp; | &nbsp;&nbsp;
-                    <a href="https://www.livemaster.ru/category/vyazanie" target="_blank" style="color: #8b4513;">Ярмарка Мастеров</a> &nbsp;&nbsp; | &nbsp;&nbsp;
-                    <a href="https://www.youtube.com/results?search_query=%D0%B2%D1%8F%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5" target="_blank">YouTube-каналы</a> &nbsp;&nbsp; | &nbsp;&nbsp;
-                    <a href="https://www.pinterest.com/search/pins/?q=knitting%20patterns" target="_blank">Pinterest</a>
-                </p>
-                <p><i>На этих сайтах вы найдете тысячи бесплатных схем</i></p>
-            </div>
-
-            <!--Демонстрация позиционирования-->
-            <hr size="3" width="100%" color="#d2b48c">
-            <br>
-            
-            <h2><font color="#8b4513">Новинки</font></h2>
-            
-            <!--Relative + Absolute-->
-            <h3>Новые изделия и схемы</h3>
-            <div class="pattern-container">
-                <p>Тут в дальнейшем появятся новые позиции.</p>
-                <div class="pattern-label">NEW</div>
-            </div>
-            
-            <!--Две колонки с float-->
-            <h3>Две колонки</h3>
-            <div class="column-container">
-                <div class="column-left">
-                    <b>Левая колонка</b>
-                    <p>Здесь может быть описание узора или схемы.</p>
-                </div>
-                <div class="column-right">
-                    <b>Правая колонка</b>
-                    <p>И тут тоже, но пока информация на этапе разработки :D</p>
-                </div>
-                <!--Clear-->
-                <div class="clear-example">
-                    <p>А тут будет общая информация для понимания всей остальной теории, просмотренной на сайте.</p>
-                </div>
-            </div>
-            
-            <!--Абсолютное позиционирование-->
-            <div class="footer-note">
-                <p align="center"><b>Актуальные схемы</b><br>
-                <font size="-1">Изделия, подходящие для данного сезона</font></p>
-            </div>
-            
-            <br>
-            <!--НИЖНИЙ КОЛОНТИТУЛ-->
-            <hr size="3" width="100%" color="#d2b48c">
-            <div align="center">
-                <p><font size="-1">Все схемы собраны из открытых источников. &copy; 2026 Вяжем вместе</font></p>
-                <p><font size="-1">✽ ✾ ✿ ❀ ❁ ❂</font></p>
-            </div>
-
+    <div class="footer">
+        <div class="container">
+            <p><span class="glyphicon glyphicon-copyright-mark"></span> 2026 Вяжем вместе</p>
+            <p><a href="form.html">Обратная связь</a></p>
         </div>
     </div>
+
+    <div class="top-button">
+        <a href="#"><span class="glyphicon glyphicon-arrow-up"></span> Наверх</a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>
